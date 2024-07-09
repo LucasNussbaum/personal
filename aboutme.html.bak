@@ -38,7 +38,7 @@ Ma.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
             <a href="images/sushir.jpg" target="_blank"><img src="images/sushir.jpg"
                 alt="picture of sushi" title="sushi" style="width: 124px; height: 124px;"></a></p>
         </div>
-        <div style="color: #3333ff; background-color: #ffff99;"> I like the
+        <div style="color: #3333ff; background-color: #ffff99;">&nbsp;I like the
           summer because I can go to the beach and the pool but I also enjoy the
           winter because I can ski.</div>
         <div> <a href="images/pool.jpg" target="_blank"><img src="images/pool.jpg"
@@ -64,6 +64,7 @@ Ma.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
       <div style="clear: both;"></div>
       <div id="tswfooter" style="color: #3333ff; background-color: #ffff99;">
         <!-- start of footer section: insert your copyright notice, etc, here -->
+        &nbsp; &nbsp; &nbsp;
         <p> Placeholder content for the footer: please replace these words with
           your real content. </p>
         <!-- end of footer section: insert your copyright notice, etc, above this line -->

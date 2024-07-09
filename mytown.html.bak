@@ -11,10 +11,8 @@
   </head>
   <body>
     <div id="tswcontainer">
-      <div id="tswheader">
-        <!-- start of header section: insert your logo, etc, here -->
-        <p> Placeholder content for your header section. Replace it with your
-          website's logo or name or page title or whatever. </p>
+      <div id="tswheader"> <img src="images/penguin.jpg" alt="pixel art of a penguin"
+          title="penguin" style="width: 100px; height: 100px;"><!-- start of header section: insert your logo, etc, here -->&nbsp;
         <p>&nbsp;</p>
         <!-- end of header section: insert your logo, etc, above this line --> </div>
       <div id="tswcontent">
