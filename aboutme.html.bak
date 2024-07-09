@@ -9,43 +9,59 @@
     <link rel="stylesheet" type="text/css" media="all" href="styles.css">
     <link rel="stylesheet" type="text/css" href="tswnavbar.css">
   </head>
-  <body style="background-color: #ffffcc;">
-    <div id="tswcontainer" style="color: #ffffcc; background-color: #ffff99;"> <a
-        href="images/penguin.jpg" target="_blank"><img src="images/penguin.jpg"
-          alt="Lucas Logo" title="penguin.jpg" style="width: 77px; height: 77px;"></a>
+  <body id="aboutme">
+    <div id="tswcontainer" style="color: #ffffcc; background-color: #ffff99;"> <a
+
+        href="images/penguin.jpg" target="_blank"><img src="images/penguin.jpg"
+
+          alt="Lucas Logo" title="penguin.jpg" style="width: 100px; height: 100px;"></a>
+      
       <div id="tswcontent" style="color: #ffffcc; background-color: #ffff99;">
         <div id="tswcontproper" style="color: #3333ff; background-color: #ffff99;">
           <!-- start of content column: insert your content here -->
           <h1>About Me</h1>
           <p id="first" style="color: #3333ff; background-color: #ffff99;">My
             name is Lucas and I grew up in Lexington
-Ma.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-              href="images/paul.jpg" target="_blank"><img src="images/paul.jpg"
-                alt="paul revere statue" title="paul" style="width: 87px; height: 129px;"
+Ma.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+
+              href="images/paul.jpg" target="_blank"><img src="images/paul.jpg"
+
+                alt="paul revere statue" title="paul" style="width: 87px; height: 129px;"
+
                 id="picture"></a></p>
           <p style="font-family: &quot;Arial&quot;,&quot;Helvetica&quot;,&quot;sans-serif&quot;; color: #3333ff; background-color: #ffff99; font-weight: normal;">I
             am 16 years old and I am rising junior in Lexington High School. In
             my free time I like to hang out with friends or play video games.</p>
-          <a href="images/videogame.jpg" target="_blank"><img src="images/videogame.jpg"
-              alt="videogame controller" title="videogame" style="width: 122px; height: 122px;"
-              id="videogame"></a>&nbsp;&nbsp; <a href="images/friends.jpg" target="_blank"><img
-              src="images/friends.jpg" alt="friends hanging out" title="friends "
+          <a href="images/videogame.jpg" target="_blank"><img src="images/videogame.jpg"
+
+              alt="videogame controller" title="videogame" style="width: 122px; height: 122px;"
+
+              id="videogame"></a>&nbsp;&nbsp; <a href="images/friends.jpg" target="_blank"><img
+
+              src="images/friends.jpg" alt="friends hanging out" title="friends "
+
               style="width: 202px; height: 118px;" id="friends"></a>
           <p style="color: #3333ff;">My favorite food is sushi and my favorite
             animal is a penguin.</p>
-          <p><a href="images/penguin2.jpg" target="_blank"><img src="images/penguin2.jpg"
+          <p><a href="images/penguin2.jpg" target="_blank"><img src="images/penguin2.jpg"
+
                 alt="picture of a penguin" title="penguin" style="width: 184px; height: 122px;"></a>&nbsp;
-            <a href="images/sushir.jpg" target="_blank"><img src="images/sushir.jpg"
+            <a href="images/sushir.jpg" target="_blank"><img src="images/sushir.jpg"
+
                 alt="picture of sushi" title="sushi" style="width: 124px; height: 124px;"></a></p>
         </div>
         <div style="color: #3333ff; background-color: #ffff99;">&nbsp;I like the
           summer because I can go to the beach and the pool but I also enjoy the
           winter because I can ski.</div>
-        <div> <a href="images/pool.jpg" target="_blank"><img src="images/pool.jpg"
+        <div> <a href="images/pool.jpg" target="_blank"><img src="images/pool.jpg"
+
               alt="pool" title="pool" style="width: 157px; height: 104px;"></a>&nbsp;
-          <a href="images/beach.jpg" target="_blank"><img src="images/beach.jpg"
-              alt="beach" title="beach" style="width: 155px; height: 105px; background-color: #ffff99;"></a>&nbsp;&nbsp;<a
-            href="images/ski.jpg" target="_blank"><img src="images/ski.jpg" alt="person skiing"
+          <a href="images/beach.jpg" target="_blank"><img src="images/beach.jpg"
+
+              alt="beach" title="beach" style="width: 155px; height: 105px; background-color: #ffff99;"></a>&nbsp;&nbsp;<a
+
+            href="images/ski.jpg" target="_blank"><img src="images/ski.jpg" alt="person skiing"
+
               title="ski" style="width: 165px; height: 103px;"></a> </div>
       </div>
       <div id="tswsidecol">

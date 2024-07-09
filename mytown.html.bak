@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="styles.css">
     <link rel="stylesheet" type="text/css" href="tswnavbar.css">
   </head>
-  <body id="back">
+  <body id="mytown">
     <div id="tswcontainer">
       <div id="tswheader"> <a href="images/penguin.jpg" target="_blank"><img src="images/penguin.jpg"
             alt="pixel art of a penguin" title="penguin" style="width: 100px; height: 100px;"></a><!-- start of header section: insert your logo, etc, here -->&nbsp;
@@ -23,18 +23,16 @@
             green where the opening shots of the american revolutionary war were
             shot. As a symbol of this a statue of paul revere is placed at this
             battle green.</p>
-          <p> If you want a navigation menu for your side column that looks like
-            the one on thesitewizard.com, you can generate your own and
-            customize it, with the <a href="https://www.thesitewizard.com/wizards/css-menu-buttons.shtml">Navigation
-              Menu Wizard</a>. It's free, just like the <a href="https://www.thesitewizard.com/wizards/layout.shtml">Layout
-              Wizard</a> that you used to create this. </p>
-          <p> And if you want a contact form (ie, one that your visitors can use
-            to reach you), go to the <a href="https://www.thesitewizard.com/wizards/feedbackform.shtml">Feedback
-              Form Wizard</a> to create one. Yes, it's free too. </p>
-          <p> Okay, that's it. I've run out of meaningful things to say for this
-            placeholder content, and can't be bothered to think up any more
-            stuff that you're just going to delete anyway. </p>
-          <p> All the best for your site! </p>
+          <img src="images/battle.jpg" alt="battle on battle green lexington" title="battle green"
+            style="width: 181px; height: 135px;"><img src="images/green.png" alt="battle green lexington"
+            title="battle green" style="width: 91px; height: 137px;">
+          <p>In my town my favorite place to eat is<em> Love at First Bite</em>
+            its a thai resturant that servers good food.</p>
+          <p>In my town we have public library and a public pool that is open in
+            the summer.</p>
+          <p>In the lexington center there are a few good bakerys such as<em>
+              When Pigs Fly</em> and<em> Bread Obsession.</em></p>
+          <p>Thank you for reading!</p>
           <p>&nbsp;</p>
           <!-- end of content column: put your content above this line --> </div>
       </div>
