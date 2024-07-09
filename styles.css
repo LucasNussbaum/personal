@@ -1,14 +1,22 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   color: #003333;
 }
 
 body#home {
-  background-color: red;
+  background-color: #ffcc99;
 }
 
-body#aboutme {
-  background-color: green;
+tswcontainer#mytown {
+  background-color: #66ffff;
+}
+
+tswfooter#mytown {
+  background-color: #66ffff;
+}
+
+tswheader#mytown {
+  background-color: #66ffff;
 }
 
 body#mytown {
@@ -33,7 +41,7 @@ div#tswsidecol {
   float: right;
   width: 20%;
   color: black;
-  background-color: #66ffff;
+  background-color: #ff9966;
 }
 
 div#tswcontent {
@@ -68,11 +76,11 @@ div#tswsideproper, div#tswothersideproper {
 
 div#tswheader {
   color: black;
-  background-color: #66ffff;
+  background-color: #ff9966;
 }
 
 div#tswfooter {
   color: black;
-  background-color: #66ffff;
+  background-color: #ccffff;
 }
 
