@@ -9,4 +9,126 @@
 
 body {
   background-color: cadetblue;
+  outline: 10px hidden darkgrey;
 } 
+
+#robot {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: robot-dance;
+  animation-duration: 100s;
+  animation-timing-function: ease-in-out;
+  /* animation-delay: 2s; 200, */
+  animation-iteration-count: infinite;
+  animation-direction: alternate; 
+}
+
+
+@keyframes robot-dance{
+  0%, 100%   {background-color:red; left:743px; top: 382px;}
+1%   {background-color:rgb(60, 180, 75); left: 1212px; top: 134px;}
+2%   {background-color:rgb(0, 128, 255); left: 1025px; top: 379px;}
+3%   {background-color:rgb(255, 99, 71); left: 1168px; top: 201px;}
+4%   {background-color:rgb(75, 0, 130); left: 822px; top: 412px;}
+5%   {background-color:rgb(245, 245, 66); left: 1273px; top: 265px;}
+6%   {background-color:rgb(220, 20, 60); left: 876px; top: 387px;}
+7%   {background-color:rgb(124, 252, 0); left: 564px; top: 332px;}
+8%   {background-color:rgb(70, 130, 180); left: 1342px; top: 175px;}
+9%   {background-color:rgb(255, 165, 0); left: 653px; top: 106px;}
+10%  {background-color:rgb(255, 132, 0); left: 1286px; top:125px;}
+11%  {background-color:rgb(218, 165, 32); left: 1034px; top: 345px;}
+12%  {background-color:rgb(0, 255, 255); left: 856px; top: 178px;}
+13%  {background-color:rgb(240, 128, 128); left: 1117px; top: 90px;}
+14%  {background-color:rgb(34, 139, 34); left: 1282px; top: 214px;}
+15%  {background-color:rgb(64, 224, 208); left: 598px; top: 357px;}
+16%  {background-color:rgb(238, 130, 238); left: 982px; top: 405px;}
+17%  {background-color:rgb(255, 140, 0); left: 742px; top: 197px;}
+18%  {background-color:rgb(139, 0, 139); left: 1183px; top: 78px;}
+19%  {background-color:rgb(50, 205, 50); left: 921px; top: 303px;}
+20%  {background-color:rgb(0, 255, 255); left:1043px; top:214px;}
+21%  {background-color:rgb(75, 0, 130); left: 1195px; top: 342px;}
+22%  {background-color:rgb(70, 130, 180); left: 812px; top: 189px;}
+23%  {background-color:rgb(255, 69, 0); left: 1097px; top: 390px;}
+24%  {background-color:rgb(210, 105, 30); left: 528px; top: 128px;}
+25%  {background-color:rgb(255, 105, 180); left: 1056px; top: 411px;}
+26%  {background-color:rgb(123, 104, 238); left: 967px; top: 236px;}
+27%  {background-color:rgb(50, 205, 50); left: 1243px; top: 53px;}
+28%  {background-color:rgb(65, 105, 225); left: 1398px; top: 377px;}
+29%  {background-color:rgb(240, 230, 140); left: 746px; top: 256px;}
+30%  {background-color:rgb(132, 0, 255); left: 298px; top:371px;}
+31%  {background-color:rgb(0, 250, 154); left: 1112px; top: 83px;}
+32%  {background-color:rgb(0, 128, 0); left: 1297px; top: 209px;}
+33%  {background-color:rgb(255, 165, 0); left: 832px; top: 336px;}
+34%  {background-color:rgb(255, 69, 0); left: 1193px; top: 413px;}
+35%  {background-color:rgb(0, 255, 255); left: 562px; top: 172px;}
+36%  {background-color:rgb(30, 144, 255); left: 1323px; top: 60px;}
+37%  {background-color:rgb(0, 255, 127); left: 1012px; top: 322px;}
+38%  {background-color:rgb(255, 0, 0); left: 972px; top: 244px;}
+39%  {background-color:rgb(173, 216, 230); left: 1246px; top: 387px;}
+40% {background-color:rgb(255, 0, 85); left:589px; top:92px;}
+41%  {background-color:rgb(46, 139, 87); left: 1253px; top: 78px;}
+42%  {background-color:rgb(220, 20, 60); left: 1137px; top: 341px;}
+43%  {background-color:rgb(135, 206, 235); left: 989px; top: 162px;}
+44%  {background-color:rgb(75, 0, 130); left: 1304px; top: 299px;}
+45%  {background-color:rgb(255, 255, 0); left: 896px; top: 98px;}
+46%  {background-color:rgb(123, 104, 238); left: 1183px; top: 417px;}
+47%  {background-color:rgb(144, 238, 144); left: 649px; top: 139px;}
+48%  {background-color:rgb(255, 0, 255); left: 1328px; top: 376px;}
+49%  {background-color:rgb(210, 105, 30); left: 794px; top: 80px;}
+50% {background-color:rgb(0, 200, 174); left:1176px; top:267px;}
+51%  {background-color:rgb(0, 191, 255); left: 1256px; top: 55px;}
+52%  {background-color:rgb(245, 245, 220); left: 1082px; top: 289px;}
+53%  {background-color:rgb(72, 61, 139); left: 891px; top: 410px;}
+54%  {background-color:rgb(255, 105, 180); left: 1235px; top: 105px;}
+55%  {background-color:rgb(255, 69, 0); left: 532px; top: 292px;}
+56%  {background-color:rgb(75, 0, 130); left: 1345px; top: 369px;}
+57%  {background-color:rgb(240, 230, 140); left: 806px; top: 122px;}
+58%  {background-color:rgb(60, 179, 113); left: 1187px; top: 404px;}
+59%  {background-color:rgb(255, 182, 193); left: 749px; top: 153px;}
+60%  {background-color:yellow; left: 805px; top:176px;}
+61%  {background-color:rgb(123, 104, 238); left: 1341px; top: 269px;}
+62%  {background-color:rgb(255, 99, 71); left: 953px; top: 387px;}
+63%  {background-color:rgb(124, 252, 0); left: 1204px; top: 188px;}
+64%  {background-color:rgb(147, 112, 219); left: 571px; top: 89px;}
+65%  {background-color:rgb(0, 191, 255); left: 1294px; top: 405px;}
+66%  {background-color:rgb(127, 255, 212); left: 821px; top: 223px;}
+67%  {background-color:rgb(255, 160, 122); left: 1149px; top: 66px;}
+68%  {background-color:rgb(70, 130, 180); left: 712px; top: 309px;}
+69%  {background-color:rgb(255, 105, 180); left: 1373px; top: 193px;}
+70%  {background-color:rgb(255, 0, 191); left:1102px; top:394px;}
+71%  {background-color:rgb(255, 250, 250); left: 1308px; top: 131px;}
+72%  {background-color:rgb(72, 209, 204); left: 953px; top: 312px;}
+73%  {background-color:rgb(0, 139, 139); left: 1271px; top: 89px;}
+74%  {background-color:rgb(0, 255, 0); left: 843px; top: 346px;}
+75%  {background-color:rgb(255, 69, 0); left: 1342px; top: 402px;}
+76%  {background-color:rgb(153, 50, 204); left: 692px; top: 109px;}
+77%  {background-color:rgb(0, 255, 127); left: 1158px; top: 272px;}
+78%  {background-color:rgb(173, 216, 230); left: 559px; top: 145px;}
+79%  {background-color:rgb(245, 245, 245); left: 1376px; top: 374px;}
+80%  {background-color:rgb(107, 0, 128); left: 379px; top:423px;}
+81%  {background-color:rgb(72, 61, 139); left: 1107px; top: 89px;}
+82%  {background-color:rgb(255, 99, 71); left: 1394px; top: 314px;}
+83%  {background-color:rgb(124, 252, 0); left: 819px; top: 147px;}
+84%  {background-color:rgb(240, 230, 140); left: 1163px; top: 405px;}
+85%  {background-color:rgb(255, 105, 180); left: 594px; top: 265px;}
+86%  {background-color:rgb(30, 144, 255); left: 1337px; top: 200px;}
+87%  {background-color:rgb(255, 215, 0); left: 832px; top: 98px;}
+88%  {background-color:rgb(0, 191, 255); left: 1136px; top: 384px;}
+89%  {background-color:rgb(72, 209, 204); left: 632px; top: 70px;}
+90% {background-color:rgb(0, 255, 128); left:652px; top:66px;}
+91%  {background-color:rgb(124, 252, 0); left: 1247px; top: 201px;}
+92%  {background-color:rgb(238, 130, 238); left: 899px; top: 389px;}
+93%  {background-color:rgb(255, 20, 147); left: 1345px; top: 135px;}
+94%  {background-color:rgb(0, 255, 127); left: 782px; top: 303px;}
+95%  {background-color:rgb(255, 140, 0); left: 1114px; top: 76px;}
+96%  {background-color:rgb(75, 0, 130); left: 537px; top: 335px;}
+97%  {background-color:rgb(240, 230, 140); left: 1298px; top: 411px;}
+98%  {background-color:rgb(147, 112, 219); left: 734px; top: 164px;}
+99%  {background-color:rgb(255, 105, 180); left: 1142px; top: 224px;}
+
+
+  
+  
+}
