@@ -16,20 +16,16 @@
       <div id="tswcontent">
         <div id="tswcontproper">
           <!-- start of content column: insert your content here -->
-          <h1><img src="images/welcome2.png" alt="welcome sign" title="welcome"
+          <h1><a href="./images/welcome2.png" target="_blank"><img src="images/welcome2.png" alt="welcome sign" title="welcome"
 
-              style="width: 463px; height: 142px;"></h1>
+              style="width: 463px; height: 142px;"></a></h1>
           <p><br>
             Welcome to the Lucas website my name is Lucas.</p>
           <p>This is my first ever website, you can navigate through this
             website using the side navigation bar found on the left. Click on
             images in order to open then in another tab.</p>
-          <p> And if you want a contact form (ie, one that your visitors can use
-            to reach you), go to the <a href="https://www.thesitewizard.com/wizards/feedbackform.shtml">Feedback
-              Form Wizard</a> to create one. Yes, it's free too. </p>
-          <p> Okay, that's it. I've run out of meaningful things to say for this
-            placeholder content, and can't be bothered to think up any more
-            stuff that you're just going to delete anyway. </p>
+          <p> Hover over the images to shake them.</p>
+          <p> At the bottom of the page click the left button to invert the colors and use the other buttons to change font size and background color </p>
           <p> All the best for your site! </p>
           <p>&nbsp;</p>
           <!-- end of content column: put your content above this line --> </div>
@@ -50,9 +46,14 @@
       <div style="clear: both;"></div>
       <div id="tswfooter" style="background-color: #ff9966;">
         <!-- start of footer section: insert your copyright notice, etc, here -->
-        <p> -- Lucas Nussbaum</p>
-        <button id="invert-color" onclick="buttonPress()">CLICK TO INVERT COLORS</button>
-        <script src="./home.js">
+        <p>Thank you for reading! -- Lucas Nussbaum</p>
+        <button class="button" id="invert-color" onclick="toggleInvert()">CLICK TO INVERT COLORS</button>
+        <label>Font Size: </label>
+    <input type="number" id="font-size-field">
+    <label>Background-color: </label>
+    <input id="color-field" value="">  
+    <button class="button" id="click-button" onclick="buttonPress()">CLICK ME!</button>
+        <script src="./home.js"> 
       
         </script>
         <!-- end of footer section: insert your copyright notice, etc, above this line -->
