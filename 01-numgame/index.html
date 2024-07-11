@@ -8,20 +8,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas' Number Game</title>
+    <title id = "1">Lucas' Number Game</title>
     <link rel="stylesheet" href="./numgame.css">
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body onload="loadGame()"> <!-- do something onload -->
-    <h1>Number Guessing Game</h1>
+    <h1 id ="2">Number Guessing Game</h1>
 
-    <label>Make a guess: </label>
+    <label id="3">Make a guess: </label>
     <input id="num-field" type="number">
     
-    <button onclick="makeGuess()">MAKE GUESS</button>
+    <button class="button" onclick="makeGuess()">MAKE GUESS</button>
     
     <p id="message-text"> </p>
+
+    <br>
+    <p id = "4">Number of remaining attempts: <span id="tries">10</span></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button id="reset" onclick="resetGame()">Reset Game</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>    
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+
+    </ul>
     <!-- more elements here! -->
      <script src="./numgame.js">
 
