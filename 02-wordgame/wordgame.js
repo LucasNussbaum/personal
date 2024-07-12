@@ -38,6 +38,8 @@ function randomBackgroundColor(){
 // For array of words: let arr = Object.keys(json)
 // For a random word:  let word = arr[randInt(0, arr.length - 1)];
 const randomWord = document.getElementById("random-word")
+const guessField = document.getElementById("guess-field")
+const feedbackText = document.getElementById("feedback-text")
 let allWords = [];
 let fiveLetterWords = [];
 let secret = '';
@@ -51,8 +53,48 @@ function wordsLoaded(){
         if (word.length!= 5) continue;
         fiveLetterWords.push(allWords[i]);
     }
-    console.log("all done!")
 
-    randomIndex = randomInt(0, fiveLetterWords.length-1)
-    secret = fiveLetterWords[randomIndex];
+    randomIndex = randInt(0, fiveLetterWords.length-1)
+    secret = fiveLetterWords[randomIndex].toLowerCase();
+    
+}
+
+function changeGuess(){
+    let guess = guessField.value.toLowerCase()
+    
+    //SKIP if its less than 5 letters
+    if(guess.length < 5) return;
+
+    //SKIP and empty input if guess is more than 5 letters
+    if(guess.length > 5){
+        guessField.value = "";
+        return;
+    }
+    console.log(`Guess: "${guess}" and Secret: "${secret}`)
+
+    //SKIP and empty input if guess is not a word
+    if(!json.hasOwnProperty(guess)){
+        feedbackText.innerHTML += `"${guess}" is not a word. Try again.<br>`
+        guessField.value = "";
+        console.log('Not a word')
+        return;
+    }
+    let correctPlacement = 0;
+    let decoratedGuess = "";
+    for (let i=0; i < 5; i++){
+        if(guess[i] == secret[i]){
+            correctPlacement++;
+            decoratedGuess += `<span class="correct">${guess[i]}</span>`
+        }
+        else{
+            decoratedGuess += guess[i];
+        }
+    }
+    feedbackText.innerHTML += `"${decoratedGuess}" has "${correctPlacement}" letter(s) in the correct place.<br>`
+    
+    guessField.value = "";
+if(correctPlacement == 5){
+    document.body.style.backgroundImage = "url('https://t3.ftcdn.net/jpg/03/14/56/66/240_F_314566645_UNHlYyGK2EVdGQ8MoNw95vvH44yknrc7.jpg')";
+    alert("you win")
+}
 }

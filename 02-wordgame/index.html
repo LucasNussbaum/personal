@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIVE ME A TITLE!</title>
+    <link rel="stylesheet" href="./wordgame.css">
 </head>
 <body onload="loadGame()">
    
@@ -11,6 +12,12 @@
     <h3>Definitely not a spin-off of NY Times Wordle</h3>
 
     <P>Today's random word is <b><span id="random-word">LOADING...</span></b></P>
+
+    <labal>Guess a 5-letter word: </labal>
+    <input id="guess-field" onchange="changeGuess()">
+
+    <br>
+    <p id="feedback-text"></p>
 </body>
 <script src="./wordgame.js"></script>
 </html>
