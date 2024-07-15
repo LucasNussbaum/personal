@@ -1,8 +1,68 @@
-.correct{
-    color: green;
-    font-size: 30;
+.correct {
+  background-color: green;
+  color: white;
+  font-size: 30px;
+  border: 2px solid black;
 }
-mark {
-    background-color: yellow;
-    color: black;
-  }
+
+.wrong-position {
+  background-color: yellow;
+  color: black;
+  font-size: 30px;
+  border: 2px solid black;
+}
+
+.letter-box {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 30px;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.invalid {
+ 
+}
+
+#feedback-text {
+  font-size: 0; /* Reset font-size to prevent spacing issues */
+}
+
+#feedback-text .letter-box {
+  font-size: 30px; /* Reapply font-size to individual boxes */
+}
+
+.word-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}

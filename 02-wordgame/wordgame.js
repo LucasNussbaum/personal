@@ -1,5 +1,7 @@
 let json;
-const body = document.body
+const body = document.body;
+let guessedWords = new Set(); // To track previously guessed words
+
 // Returns a random integer between min and max
 //   [min, min+1, min+2, ... , max-1, max]
 function randInt(min, max) {
@@ -22,79 +24,106 @@ function loadGame() {
         .catch(error => {
             console.error('Error fetching words: ', error);
         });
-body.style.backgroundColor = "lightblue" 
+    body.style.backgroundColor = "lightblue";
 }
 
-function randomBackgroundColor(){
-    let random = randInt(0, 359);
-    let colorString = `hsl(${random},100%,50%)`
-    body.style.backgroundColor = colorString
-}
+function wordsLoaded() {
+    let allWords = Object.keys(json);
+    let randomIndex = randInt(0, allWords.length - 1);
 
-
-// TODO: write function isWord(word)
-
-// For checking word:  json.hasOwnProperty("programming")
-// For array of words: let arr = Object.keys(json)
-// For a random word:  let word = arr[randInt(0, arr.length - 1)];
-const randomWord = document.getElementById("random-word")
-const guessField = document.getElementById("guess-field")
-const feedbackText = document.getElementById("feedback-text")
-let allWords = [];
-let fiveLetterWords = [];
-let secret = '';
-function wordsLoaded(){
-    let allWords = Object.keys(json)
-    let randomIndex = randInt(0, allWords.length-1)
-    randomWord.innerHTML = allWords[randomIndex]
-
-    for(let i = 0; i<allWords.length; i++){
+    for (let i = 0; i < allWords.length; i++) {
         let word = allWords[i];
-        if (word.length!= 5) continue;
+        if (word.length != 5) continue;
         fiveLetterWords.push(allWords[i]);
     }
 
-    randomIndex = randInt(0, fiveLetterWords.length-1)
+    randomIndex = randInt(0, fiveLetterWords.length - 1);
     secret = fiveLetterWords[randomIndex].toLowerCase();
-    
 }
 
-function changeGuess(){
-    let guess = guessField.value.toLowerCase()
+function changeGuess() {
+    let guess = guessField.value.toLowerCase();
     
-    //SKIP if its less than 5 letters
-    if(guess.length < 5) return;
+    // SKIP if it's less than 5 letters
+    if (guess.length < 5) {
+        randomWord.innerHTML = "Enter a 5-letter word.";
+        return;
+    }
 
-    //SKIP and empty input if guess is more than 5 letters
-    if(guess.length > 5){
+    // SKIP and empty input if guess is more than 5 letters
+    if (guess.length > 5) {
+        randomWord.innerHTML = "Enter a 5-letter word.";
         guessField.value = "";
         return;
     }
-    console.log(`Guess: "${guess}" and Secret: "${secret}`)
 
-    //SKIP and empty input if guess is not a word
-    if(!json.hasOwnProperty(guess)){
-        feedbackText.innerHTML += `"${guess}" is not a word. Try again.<br>`
+    // Check if the guess is a valid word
+    if (!json.hasOwnProperty(guess)) {
+        randomWord.innerHTML = `<span>"${guess}" is not a real word. Try again.</span>`;
         guessField.value = "";
-        console.log('Not a word')
         return;
     }
+
+    // Check if the word has been guessed already
+    if (guessedWords.has(guess)) {
+        randomWord.innerHTML = `"${guess}" has already been guessed. Try a different word.`;
+        guessField.value = "";
+        return;
+    }
+
+    // Add the word to the set of guessed words
+    guessedWords.add(guess);
+
+    console.log(`Guess: "${guess}" and Secret: "${secret}"`);
+
     let correctPlacement = 0;
-    let decoratedGuess = "";
-    for (let i=0; i < 5; i++){
-        if(guess[i] == secret[i]){
+    let decoratedGuess = [];
+    let secretLetters = secret.split('');
+    let guessLetters = guess.split('');
+    let matchedIndices = new Set();
+
+    // Create a container for the current guess row
+    let row = document.createElement('div');
+    row.classList.add('word-row');
+
+    // First pass: Check for correct placements
+    for (let i = 0; i < 5; i++) {
+        if (guessLetters[i] === secretLetters[i]) {
             correctPlacement++;
-            decoratedGuess += `<span class="correct">${guess[i]}</span>`
-        }
-        else{
-            decoratedGuess += guess[i];
+            decoratedGuess.push(`<span class="letter-box correct">${guessLetters[i]}</span>`);
+            matchedIndices.add(i);
+            secretLetters[i] = null; // Remove the letter from consideration in the second pass
+        } else {
+            decoratedGuess.push(`<span class="letter-box">${guessLetters[i]}</span>`);
         }
     }
-    feedbackText.innerHTML += `"${decoratedGuess}" has "${correctPlacement}" letter(s) in the correct place.<br>`
-    
+
+    // Second pass: Check for correct letters in the wrong position
+    for (let i = 0; i < 5; i++) {
+        if (!matchedIndices.has(i) && secretLetters.includes(guessLetters[i])) {
+            let index = secretLetters.indexOf(guessLetters[i]);
+            decoratedGuess[i] = `<span class="letter-box wrong-position">${guessLetters[i]}</span>`;
+            secretLetters[index] = null; // Remove the letter from further consideration
+        }
+    }
+
+    // Convert the array back to a string
+    decoratedGuess = decoratedGuess.join('');
+
+    // Append the row to the feedback text container
+    row.innerHTML = decoratedGuess;
+    feedbackText.appendChild(row);
+
     guessField.value = "";
-if(correctPlacement == 5){
-    document.body.style.backgroundImage = "url('https://t3.ftcdn.net/jpg/03/14/56/66/240_F_314566645_UNHlYyGK2EVdGQ8MoNw95vvH44yknrc7.jpg')";
-    alert("you win")
+    if (correctPlacement == 5) {
+        alert("you win");
+    }
 }
-}
+
+// Initialize the elements for the game
+const randomWord = document.getElementById("random-word");
+const guessField = document.getElementById("guess-field");
+const feedbackText = document.getElementById("feedback-text");
+let allWords = [];
+let fiveLetterWords = [];
+let secret = '';
