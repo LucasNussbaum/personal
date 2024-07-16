@@ -8,30 +8,21 @@
 </head>
 <body onload="loadGame()">
    
-    <h1>My Word Game</h1>
-    <h3>Definitely not a spin-off of NY Times Wordle</h3>
+    <div class="container">
+        <h1>My Word Game</h1>
+        <h3>Definitely not a spin-off of NY Times Wordle</h3>
 
-    <P>Feedback apears here:<b><span id="random-word"> make a guess</span></b></P>
+        <p>Feedback appears here: <b><span id="random-word">make a guess</span></b></p>
 
-    <labal>Guess a 5-letter word: </labal>
-    <input id="guess-field" onchange="changeGuess()">
+        <label>Guess a 5-letter word: </label>
+        <input id="guess-field" onchange="changeGuess()">
 
-    <br>
-    <p id="feedback-text"></p>
-    <br>
-    <br>
-    <br>
+        <br>
+        <p id="feedback-text"></p>
+    </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
     <a href="../index.html" class="previous">&laquo; Home</a>
+
+    <script src="./wordgame.js"></script>
 </body>
-<script src="./wordgame.js"></script>
 </html>
