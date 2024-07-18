@@ -23,9 +23,6 @@
   box-sizing: border-box;
 }
 
-.invalid {
- 
-}
 
 #feedback-text {
   font-size: 0; /* Reset font-size to prevent spacing issues */
